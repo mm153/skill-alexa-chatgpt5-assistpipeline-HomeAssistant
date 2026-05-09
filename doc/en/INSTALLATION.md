@@ -8,7 +8,7 @@
 
 1. Create a Skill in the [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask) by following the steps below:
    - **Name your Skill**: Choose a name of your preference (e.g., Home Assistant Assist)
-   - **Choose a primary locale**: Portuguese (BR)
+   - **Choose a primary locale**: English (US), English (UK), or German
    - **Choose a type of experience**: Other
    - **Choose a model**: Custom
    - **Hosting services**: Alexa-hosted (Python)
@@ -23,7 +23,7 @@
      home_assistant_url=https://YOUR-HOME-ASSISTANT-EXTERNAL-URL/api/conversation/process
      home_assistant_token=YOUR-HOME-ASSISTANT-TOKEN
      home_assistant_agent_id=YOUR-AGENT-ID
-     home_assistant_language=pt-BR
+     home_assistant_language=en-US
      home_assistant_room_recognition=False
      home_assistant_dashboard=YOUR-DASHBOARD-ID
      home_assistant_kioskmode=False
@@ -112,6 +112,24 @@
      ```txt
      If asked to perform an action and no area is specified for the device, capture the identifier contained after "device_id:" in the command, obtain the label with the same identifier, and associate the device requested in the command to the label area found.
      ```
+
+### Local Development with uv
+
+The repository includes `pyproject.toml` and `uv.lock` for local development using [uv](https://github.com/astral-sh/uv).
+
+**Setup:**
+```bash
+uv sync          # creates .venv with pinned dependencies
+```
+
+**Regenerate `lambda/requirements.txt`** after changing deps in `pyproject.toml`:
+```bash
+uv export --no-hashes --no-dev --output-file lambda/requirements.txt
+```
+
+Commit `pyproject.toml`, `uv.lock`, and `lambda/requirements.txt` together. The Alexa Hosted build pipeline installs only from `requirements.txt` — uv is a local tool and is never invoked by Hosted.
+
+---
 
 ### Good luck!
 Now you can use your Alexa skill to integrate and interact with Home Assistant via voice using Assist or open your favorite dashboard on the Echo Show.

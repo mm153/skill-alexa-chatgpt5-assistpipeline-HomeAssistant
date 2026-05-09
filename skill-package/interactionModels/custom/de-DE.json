@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "maison intelligente",
+      "invocationName": "home assistant",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -44,12 +44,14 @@
             }
           ],
           "samples": [
-            "merci",
-            "au revoir",
-            "fermer",
-            "{exitPhrase} merci",
-            "{exitPhrase} au revoir",
-            "{exitPhrase} fermer"
+            "danke",
+            "tschüss",
+            "beenden",
+            "schließen",
+            "{exitPhrase} danke",
+            "{exitPhrase} tschüss",
+            "{exitPhrase} beenden",
+            "{exitPhrase} schließen"
           ]
         }
       ],

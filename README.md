@@ -46,13 +46,9 @@ For instructions how to set this skill up refer to the [installation](doc/en/INS
 
 The skill has support for the following languages:
 
-- Portuguese (Brazil)
-- Portuguese (Portugal)
 - English (United States)
-- English (England)
-- French
-- Italian
-- Spanish
+- English (United Kingdom)
+- German
 
 ---
 

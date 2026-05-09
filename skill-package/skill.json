@@ -118,6 +118,18 @@
       "category": "SMART_HOME",
       "isAvailableWorldwide": true,
       "locales": {
+        "de-DE": {
+          "name": "Home Assistant Assist",
+          "summary": "Steuere dein Smart Home mit dem Home Assistant Assistenten.",
+          "description": "Mit diesem Skill kannst du über die Konversations-API mit deiner Home Assistant Assist Instanz interagieren.",
+          "smallIconUri": "file://assets/images/common_smallIconUri.png",
+          "largeIconUri": "file://assets/images/common_largeIconUri.png",
+          "examplePhrases": [
+            "Alexa, öffne home assistant",
+            "Küchenlicht ausschalten",
+            "Klimaanlage im Büro einschalten"
+          ]
+        },
         "en-GB": {
           "name": "Home Assistant Assist",
           "summary": "Control your smart home by interacting with the Home Assistant Assist.",
@@ -140,66 +152,6 @@
             "Alexa, open home assistant",
             "Turn off the kitchen lights",
             "Turn on the office air conditioner"
-          ]
-        },
-        "es-ES": {
-          "name": "Home Assistant Assist",
-          "summary": "Controla tu hogar inteligente interactuando con el Asistente de Home Assistant.",
-          "description": "Esta skill te permite interactuar con tu instancia de Asistente de Home Assistant mediante la API de conversación.",
-          "smallIconUri": "file://assets/images/common_smallIconUri.png",
-          "largeIconUri": "file://assets/images/common_largeIconUri.png",
-          "examplePhrases": [
-            "Alexa, abrir home assistant",
-            "Apaga la luz de la cocina",
-            "Enciende el aire acondicionado de la oficina"
-          ]
-        },
-        "fr-FR": {
-          "name": "Home Assistant Assist",
-          "summary": "Contrôlez votre maison intelligente en interagissant avec l'assistant Home Assistant.",
-          "description": "Cette skill vous permet d'interagir avec votre instance Home Assistant Assist via l'API de conversation.",
-          "smallIconUri": "file://assets/images/common_smallIconUri.png",
-          "largeIconUri": "file://assets/images/common_largeIconUri.png",
-          "examplePhrases": [
-            "Alexa, ouvrir home assistant",
-            "Éteignez la lumière de la cuisine",
-            "Allumez la climatisation du bureau"
-          ]
-        },
-        "it-IT": {
-          "name": "Home Assistant Assist",
-          "summary": "Controlla la tua casa intelligente interagendo con l'assistente di Home Assistant.",
-          "description": "Questa skill ti permette di interagire con la tua istanza di Home Assistant Assist tramite l'API di conversazione.",
-          "smallIconUri": "file://assets/images/common_smallIconUri.png",
-          "largeIconUri": "file://assets/images/common_largeIconUri.png",
-          "examplePhrases": [
-            "Alexa, apri home assistant",
-            "Spegni la luce della cucina",
-            "Accendi l'aria condizionata dell'ufficio"
-          ]
-        },
-        "pt-BR": {
-          "name": "Home Assistant Assist",
-          "summary": "Controle sua casa inteligente interagindo com o Assist do Home Assistant.",
-          "description": "Essa skill permite que você interaja com sua instância do Home Assistant Assist por meio da API de conversação.",
-          "smallIconUri": "file://assets/images/common_smallIconUri.png",
-          "largeIconUri": "file://assets/images/common_largeIconUri.png",
-          "examplePhrases": [
-            "Alexa, abrir home assistant",
-            "Desligue a luz da cozinha",
-            "Ligue o ar do escritório"
-          ]
-        },
-        "pt-PT": {
-          "name": "Home Assistant Assist",
-          "summary": "Controle a sua casa inteligente interagindo com o Assist do Home Assistant.",
-          "description": "Esta skill permite interagir com a sua instância do Home Assistant Assist através da API de conversação.",
-          "smallIconUri": "file://assets/images/common_smallIconUri.png",
-          "largeIconUri": "file://assets/images/common_largeIconUri.png",
-          "examplePhrases": [
-            "Alexa, abrir home assistant",
-            "Desligue a luz da cozinha",
-            "Ligue o ar do escritório"
           ]
         }
       },
