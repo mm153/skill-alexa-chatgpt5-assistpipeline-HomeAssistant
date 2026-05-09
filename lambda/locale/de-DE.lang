@@ -1,0 +1,14 @@
+echo_screen_welcome_text=Willkommen bei Home Assistant!
+echo_screen_click_text=Tippe unten auf den Button, um das Dashboard zu öffnen
+echo_screen_button_text=Home Assistant öffnen
+
+alexa_speak_welcome_message=Willkommen beim Home Assistant Sprachassistenten! Wie kann ich helfen?
+alexa_speak_next_message=Hallo, wie kann ich dir helfen?
+alexa_speak_question=Noch etwas?
+alexa_speak_help=Wie kann ich dir helfen?
+alexa_speak_exit=Bis später!;Tschüss;Wenn du mich brauchst, bin ich da;Okay, ich bin weg;Danke und tschüss.;Bis dann.
+alexa_speak_error=Entschuldigung, ich konnte deine Anfrage nicht verarbeiten.
+alexa_speak_timeout=Home Assistant hat zu lange gebraucht. Vereinfache den Befehl und versuche es erneut!
+alexa_speak_open_dashboard=Home Assistant wird geöffnet
+
+keywords_to_open_dashboard=dashboard öffnen; home assistant öffnen
