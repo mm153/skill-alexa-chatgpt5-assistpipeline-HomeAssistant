@@ -15,6 +15,7 @@ from ask_sdk_core.handler_input import HandlerInput
 from ask_sdk_model.interfaces.alexa.presentation.apl import RenderDocumentDirective, ExecuteCommandsDirective, OpenUrlCommand
 from ask_sdk_model import Response
 from datetime import datetime, timezone
+from typing import Dict, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -59,7 +60,7 @@ _http_session.headers.update({
 })
 
 # Locale string cache — keyed by locale code; eliminates per-request disk reads
-_locale_cache: dict[str, dict[str, str]] = {}
+_locale_cache: Dict[str, Dict[str, str]] = {}
 
 
 def load_localization(locale: str) -> None:
@@ -67,7 +68,7 @@ def load_localization(locale: str) -> None:
         file_name = f"locale/{locale}.lang"
         if not os.path.exists(file_name):
             file_name = "locale/en-US.lang"
-        locale_data: dict[str, str] = {}
+        locale_data: Dict[str, str] = {}
         try:
             with open(file_name, encoding='utf-8') as f:
                 for line in f:
@@ -86,7 +87,7 @@ def load_localization(locale: str) -> None:
 load_localization("en-US")
 
 # APL template cache — loaded once at cold start; deep-copied before mutation per request
-_APL_TEMPLATES: dict[str, dict] = {}
+_APL_TEMPLATES: Dict[str, dict] = {}
 for _tpl in ("apl_openha.json", "apl_empty.json"):
     try:
         with open(_tpl, encoding='utf-8') as _f:
@@ -159,7 +160,7 @@ class GptQueryIntentHandler(AbstractRequestHandler):
         return handler_input.response_builder.speak(response).ask(globals().get("alexa_speak_question")).response
 
 
-def process_conversation(query: str, conversation_id: str | None) -> tuple[str, str | None]:
+def process_conversation(query: str, conversation_id: Optional[str]) -> Tuple[str, Optional[str]]:
     try:
         data: dict = {
             "text": query,
